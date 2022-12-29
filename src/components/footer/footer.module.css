@@ -1,0 +1,73 @@
+.container {
+ 
+  margin-bottom: 0px;
+  display: flex;
+}
+.left {
+   margin: 20px;
+  flex: 1.4;
+}
+.logo {
+}
+.desc {
+  margin: 20px 0px;
+}
+.socialCon {
+  display: flex;
+}
+.socialicon {
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.center {
+  flex: 1;
+  padding: 20px;
+}
+.title {
+  margin-bottom: 30px;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.listitem{
+  width: 50%;
+  margin-bottom: 10px;
+}
+.right {
+  flex: 1;
+  padding: 20px; 
+  align-items: center;
+}
+.payment {
+  width: 20px;
+  height: 20px;
+  margin: 0px 10px;
+}
+.contactIcon{
+    margin-right: 10px;
+}
+.contactItem{
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .center{
+    display: none;
+  }
+  .container{
+    flex-direction: column;
+  }
+  .right{
+    background-color: lightgray;
+  }
+}

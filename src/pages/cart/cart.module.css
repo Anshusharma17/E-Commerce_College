@@ -1,0 +1,140 @@
+.container {
+}
+.wrapper {
+  padding: 20px;
+}
+.title {
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.topbtn {
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.toptexts {
+}
+.toptext {
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.info {
+  flex: 3;
+}
+.product {
+  /* margin: 20px 0; */
+  display: flex;
+  justify-content: space-between;
+}
+.productdetails {
+  flex: 2;
+  display: flex;
+}
+.productimg {
+  width: 200px;
+}
+.details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.productname {
+}
+.productid {
+}
+.productcolor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /* background-color: black; */
+}
+.productsize {
+}
+.pricedetails {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.amtCon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.productamt {
+  font-size: 24px;
+  margin: 5px;
+}
+.productprice {
+  font-size: 30px;
+  font-weight: 200;
+}
+.hr {
+  background-color: #eee;
+  border: none;
+  height: 1px;
+}
+.summary {
+  flex: 1;
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  height: 55vh;
+}
+.sumtitle {
+  font-weight: 200;
+}
+.sumitem {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.sumitemtext {
+}
+.sumitemprice {
+}
+.boldsumitem {
+  font-weight: 500;
+  font-size: 24px;
+}
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+}
+@media screen and (max-width: 480px) {
+ .toptext{
+  display: none;
+ }
+ .bottom{
+  flex-direction: column;
+ }
+ .product{
+  flex-direction: column;
+ }
+ .productamt{
+  margin: 5px 15px;
+ }
+ .productprice{
+  margin-bottom: 20px;
+ }
+}
+ 
