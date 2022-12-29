@@ -1,8 +1,12 @@
 import axios from "axios";
 
 const BASE_URL = "https://e-commerce-server-v980.onrender.com/api/";
-const TOKEN = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user)
-  .currentUser?.acccesToken;
+ 
+const access = JSON?.parse(localStorage?.getItem("persist:root"))?.user;
+let TOKEN = "";
+if (access !== undefined) {
+  TOKEN = JSON?.parse(access).currentUser?.acccesToken;
+}
  
 export const publicRequest = axios.create({
   baseURL: BASE_URL,
