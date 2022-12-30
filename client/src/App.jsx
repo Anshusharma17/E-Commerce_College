@@ -6,7 +6,7 @@ import ProductionList from "./pages/productionlist/ProductionList";
 import Register from "./pages/register/Register";
 import Cart from "./pages/cart/Cart";
 import {
-  BrowserRouter as Router,
+ HashRouter as Router,
   Routes,
   Route,
   Navigate,
