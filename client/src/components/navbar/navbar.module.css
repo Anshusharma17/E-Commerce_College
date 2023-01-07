@@ -74,14 +74,14 @@
     width: 60%;
   }
   .logo{
-    font-size: 24px;
+    font-size: 18px;
   }
   .right{
     justify-content: center;
     flex: 2;
   }
   .menuitem{
-    font-size: 16px;
+    font-size: 12px;
     margin-left: 10px;
   }
 }
