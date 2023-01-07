@@ -23,7 +23,7 @@ const Navbar =  () => {
           </div>
         </div>
         <div className={s.center}>
-          <div className={s.logo}>Fashion</div>
+          <div className={s.logo}>Style House</div>
         </div>
         <div className={s.right}>
           {!user && (
