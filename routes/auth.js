@@ -12,6 +12,8 @@ router.post("/register", async (req, res) => {
     CryptoJS.enc.Hex
   );
   const newUser = new User({
+    fname: req.body.fname,
+    lname: req.body.lname,
     username: req.body.username,
     email: req.body.email,
     password: userpass,
