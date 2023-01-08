@@ -20,21 +20,26 @@
 //     )
 // }
 
-// export default Register
+// export default Register 
+
 import { useState } from "react";
 import { userRequest } from "../../resquestMehtod";
 import s from "./register.module.css";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [cpassword, setCPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [all, setAll] = useState({});
+  const [all, setAll] = useState({
+    fname: "",
+    lname: "",
+    username: "",
+    email: "",
+    password: "",
+    CPassword: "",
+  });
   let navigate = useNavigate();
+  let post = async () => {
+    await userRequest.post("/auth/register", all);
+  };
 
   return (
     <div className={s.container}>
@@ -47,7 +52,10 @@ const Register = () => {
             className={s.input}
             placeholder="first name"
             onChange={(e) => {
-              setFname(e.target.value);
+              setAll({
+                ...all,
+                fname: e.target.value,
+              });
             }}
           />
           <input
@@ -56,7 +64,10 @@ const Register = () => {
             className={s.input}
             placeholder="last name"
             onChange={(e) => {
-              setLname(e.target.value);
+              setAll({
+                ...all,
+                lname: e.target.value,
+              });
             }}
           />
           <input
@@ -65,7 +76,10 @@ const Register = () => {
             className={s.input}
             placeholder="username"
             onChange={(e) => {
-              setUsername(e.target.value);
+              setAll({
+                ...all,
+                username: e.target.value,
+              });
             }}
           />
           <input
@@ -74,7 +88,10 @@ const Register = () => {
             className={s.input}
             placeholder="email"
             onChange={(e) => {
-              setEmail(e.target.value);
+              setAll({
+                ...all,
+                email: e.target.value,
+              });
             }}
           />
           <input
@@ -83,7 +100,10 @@ const Register = () => {
             className={s.input}
             placeholder="password"
             onChange={(e) => {
-              setPassword(e.target.value);
+              setAll({
+                ...all,
+                password: e.target.value,
+              });
             }}
           />
           <input
@@ -92,7 +112,10 @@ const Register = () => {
             className={s.input}
             placeholder="confirm password"
             onChange={(e) => {
-              setCPassword(e.target.value);
+              setAll({
+                ...all,
+                CPassword: e.target.value,
+              });
             }}
           />
           <span className={s.agreement}>
@@ -103,19 +126,13 @@ const Register = () => {
           </span>
           <button
             onClick={(e) => {
-                e.preventDefault();
-              if (password !== cpassword) {
+              e.preventDefault();
+              let { password, CPassword } = all;
+
+              if (password !== CPassword) {
                 alert("Passwords don't match");
               } else {
-                setAll({
-                  fname,
-                  lname,
-                  username,
-                  email,
-                  password,
-                });
-                userRequest.post("/register", all);
-                console.log(all);
+                post();
                 navigate("/login");
               }
             }}
@@ -130,3 +147,4 @@ const Register = () => {
 };
 
 export default Register;
+
